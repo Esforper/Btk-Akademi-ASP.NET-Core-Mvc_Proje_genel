@@ -1,5 +1,6 @@
 using Repositories.Contracts;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace Repositories  //Repositories şeklinde namespace i tanımladık
 {
@@ -15,6 +16,8 @@ namespace Repositories  //Repositories şeklinde namespace i tanımladık
         {
             _context = context;
         }
+
+        //önce interface seviyesinde bu tanım yapılmalı
         public IQueryable<T> FindAll(bool trackChanges) //veri ile ilgili bir iş yapılmak isteniyor, DI çerçevesi kullanılabilir
         {
             return trackChanges
@@ -23,7 +26,13 @@ namespace Repositories  //Repositories şeklinde namespace i tanımladık
                 //6.4
         }
 
-
+        public T? FindByCondition(Expression<Func<T, bool>> Expression, bool trackChanges)  //ilgili kuralım implemente edilmiş hali
+        {   //trackChanges ifadesi true ise değişiklikler izlenecek demek
+            return trackChanges
+                ? _context.Set<T>().Where(Expression).SingleOrDefault()
+                : _context.Set<T>().Where(Expression).AsNoTracking().SingleOrDefault();     //eğer değişiklikler izlenmeyecekse
+                //.AsNoTracking() : değişiklikleri takip etme
+        }
     }
 }
 //public abstract class RepositoryBase<T> : IRepositoryBase<T> ,  IRepositoryBase yapısını kabul etmesi , desteklenmesi isteniyor.

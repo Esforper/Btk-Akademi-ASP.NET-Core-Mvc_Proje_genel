@@ -8,10 +8,7 @@ namespace Repositories.Contracts
     //bu base den gelen bütün ifadeleri IProductRepository üzerinde rahatlıkla kullanılabilir.
     {
         IQueryable<Product> GetAllProducts(bool trackChanges);
-
-
-
-
+        Product? GetOneProduct(int id , bool trackChanges);
 
     }
 }
