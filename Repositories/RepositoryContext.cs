@@ -8,6 +8,7 @@ namespace Repositories
     //DbContext kalıtım ile RepositoryContexte devraldı
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         //*** normalde default olarak construct tanımlanır ama eğer başka construct tanımlanırsa default construct iptal olur 
         public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options)
@@ -29,6 +30,12 @@ namespace Repositories
                 new Product() { ProductId = 5, ProductName = "Deck", Price = 1_500 }
 
             );
+
+            modelBuilder.Entity<Category>()
+            .HasData(
+                new Category() {CategoryId=1, CategoryName="Book"},
+                new Category() {CategoryId=2, CategoryName="Electronic"}
+            );  //bunu yaptıktan sonra migration almaya hazırız
         }
     }
 }
