@@ -1,0 +1,12 @@
+using Entities.Models;
+
+namespace Services.Contracts
+{
+    public interface ICategoryService
+    {
+        IEnumerable<Category> GetAllCategories(bool trackChanges);
+        // * GetAllCategories gibi bir tanımı ilk kez burada yapıyoruz
+
+
+    } 
+}

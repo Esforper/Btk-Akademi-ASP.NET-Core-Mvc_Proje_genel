@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj": {}
+    "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj": {
+    "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\obj\\",
+        "outputPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

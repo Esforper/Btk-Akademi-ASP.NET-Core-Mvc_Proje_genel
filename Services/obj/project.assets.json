@@ -525,6 +525,21 @@
         "runtime": {
           "bin/placeholder/Entities.dll": {}
         }
+      },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
       }
     }
   },
@@ -1159,13 +1174,17 @@
       "type": "project",
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Entities >= 1.0.0",
-      "Microsoft.EntityFrameworkCore >= 6.0.0",
-      "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.0"
+      "Repositories >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1175,11 +1194,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Repositories\\Repositories.csproj",
-      "projectName": "Repositories",
-      "projectPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Repositories\\Repositories.csproj",
+      "projectUniqueName": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Services\\Services.csproj",
+      "projectName": "Services",
+      "projectPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Repositories\\obj\\",
+      "outputPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1203,6 +1222,9 @@
           "projectReferences": {
             "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj"
+            },
+            "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Repositories\\Repositories.csproj"
             }
           }
         }
@@ -1216,16 +1238,6 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[6.0.0, )"
-          },
-          "Microsoft.EntityFrameworkCore.Sqlite": {
-            "target": "Package",
-            "version": "[6.0.0, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

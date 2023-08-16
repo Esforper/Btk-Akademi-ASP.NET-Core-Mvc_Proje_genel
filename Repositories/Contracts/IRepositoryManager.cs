@@ -8,7 +8,7 @@ namespace Repositories.Contracts
         //ef core nesneleri izliyor, nesnelerde bir değişiklik olduğunda bunları kalıcı olarak kaydedilmesi için bir save
         //komutuna ihtiyaç var
 
-        ICategoryRepository Category {get ;}    //bu soyut hali
+        ICategoryRepository Category {get ;}  
         void Save();
     }    
 }
