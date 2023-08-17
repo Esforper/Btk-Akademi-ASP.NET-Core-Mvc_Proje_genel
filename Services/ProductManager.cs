@@ -20,6 +20,19 @@ namespace Services
            _manager.Save();
         }
 
+        public void DeleteOneProduct(int id)
+        {
+            //Product product = GetOneProduct(id,false) ?? new Product(); //null değer olabilirdi,
+            //null değer olursa yeni product ile veri tabanına git, amaç her türlü orada bir nesne olmasını sağlamak
+
+            Product product = GetOneProduct(id,false);
+            if(product is not null)
+            {
+            _manager.Product.DeleteOneProduct(product);
+            _manager.Save();
+            }
+        }
+
         //manager productRepository e bağlı
         //IProductRepository , repository e bağlı
         //repository configuration a bağlı

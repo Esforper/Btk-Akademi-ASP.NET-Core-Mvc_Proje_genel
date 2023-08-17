@@ -9,5 +9,6 @@ namespace Services.Contracts
 
         void CreateProduct(Product product);
         void UpdateOneProduct(Product product); //ProductManagerda metod üret diyince direkt buraya gönderdi
+        void DeleteOneProduct(int id);
     }   
 }

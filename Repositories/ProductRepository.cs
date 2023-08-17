@@ -13,7 +13,12 @@ namespace Repositories
 
         }
 
-        public void CreateProduct(Product product) => Create(product);
+        public void CreateOneProduct(Product product) => Create(product);
+
+        public void DeleteOneProduct(Product product) => Remove(product);
+
+       
+
         //Create ifadesini Base de tanımlamıştık ve ilk class tanımında da gözüktüğü gibi ProductRepository, RepositoryBase e 
         //erişimi var
 

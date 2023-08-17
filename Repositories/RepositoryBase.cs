@@ -39,7 +39,10 @@ namespace Repositories  //Repositories şeklinde namespace i tanımladık
                 //.AsNoTracking() : değişiklikleri takip etme
         }
 
-        
+        public void Remove(T entitiy)
+        {
+            _context.Set<T>().Remove(entitiy);
+        }
     }
 }
 //public abstract class RepositoryBase<T> : IRepositoryBase<T> ,  IRepositoryBase yapısını kabul etmesi , desteklenmesi isteniyor.

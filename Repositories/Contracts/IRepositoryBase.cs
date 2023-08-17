@@ -16,5 +16,6 @@ namespace Repositories.Contracts
         T? FindByCondition(Expression<Func<T,bool>> Expression , bool trackChanges);    //ilgili kural
 
         void Create(T entitiy);
+        void Remove (T entitiy);    //T şeklinde entity e bağlı
     }
 }
