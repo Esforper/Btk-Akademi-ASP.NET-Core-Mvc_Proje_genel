@@ -46,5 +46,14 @@ namespace Services
             }
             return product;
         }
+
+        public void UpdateOneProduct(Product product)
+        {
+            var entity = _manager.Product.GetOneProduct(product.ProductId,true);
+            entity.ProductName = product.ProductName;
+            entity.Price = product.Price;
+            _manager.Save();
+            //? entity framefork core ilgili varlığı izlediği için ilgili işlemleri yapıyor
+        }
     }
 }
