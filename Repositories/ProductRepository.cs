@@ -13,6 +13,10 @@ namespace Repositories
 
         }
 
+        public void CreateProduct(Product product) => Create(product);
+        //Create ifadesini Base de tanımlamıştık ve ilk class tanımında da gözüktüğü gibi ProductRepository, RepositoryBase e 
+        //erişimi var
+
         public IQueryable<Product> GetAllProducts(bool trackChanges) => FindAll(trackChanges);
        
 

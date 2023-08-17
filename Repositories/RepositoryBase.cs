@@ -17,6 +17,11 @@ namespace Repositories  //Repositories şeklinde namespace i tanımladık
             _context = context;
         }
 
+        public void Create(T entitiy)
+        {
+            _context.Set<T>().Add(entitiy);
+        }
+
         //önce interface seviyesinde bu tanım yapılmalı
         public IQueryable<T> FindAll(bool trackChanges) //veri ile ilgili bir iş yapılmak isteniyor, DI çerçevesi kullanılabilir
         {
@@ -33,6 +38,8 @@ namespace Repositories  //Repositories şeklinde namespace i tanımladık
                 : _context.Set<T>().Where(Expression).AsNoTracking().SingleOrDefault();     //eğer değişiklikler izlenmeyecekse
                 //.AsNoTracking() : değişiklikleri takip etme
         }
+
+        
     }
 }
 //public abstract class RepositoryBase<T> : IRepositoryBase<T> ,  IRepositoryBase yapısını kabul etmesi , desteklenmesi isteniyor.
