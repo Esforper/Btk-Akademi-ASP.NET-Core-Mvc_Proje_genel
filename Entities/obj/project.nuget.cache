@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e9p5aMBQSZ1sieBxcSabj6Uar/w3xPLlDder7Awho+f7/J+QHR8O26Tcb/quYqBKStP/rW8GKvGtH76dGOW31g==",
+  "dgSpecHash": "OgR9bC+4tQdKsg3ky4L+gyZUuSvgGw9vBdDb5ojGhil/Xe8SMYZIK3dN9/DQCt6DGNh4EYAF1MgJ1YhWUcrv0Q==",
   "success": true,
-  "projectFilePath": "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

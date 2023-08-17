@@ -1220,8 +1220,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj": {
-              "projectPath": "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj"
+            "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Kodlar\\backend çalışma\\mvc\\Store\\Entities\\Entities.csproj"
             },
             "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Repositories\\Repositories.csproj": {
               "projectPath": "c:\\Kodlar\\backend çalışma\\mvc\\Store\\Repositories\\Repositories.csproj"
