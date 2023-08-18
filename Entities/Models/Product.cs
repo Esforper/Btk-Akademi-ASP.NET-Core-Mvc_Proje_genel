@@ -13,6 +13,11 @@ public class Product
         [Required(ErrorMessage = "The Value is invalid")]  //ilgili nesnenin hemen üstüne yazılmalı
         public decimal Price { get; set; }
 
+        public int CategoryId { get; set; }     //Foregin key
+        public Category? Category { get; set; }         //Navigation property
+        //Product üzerindeki Category de fiziksel bir kayıt olmayacak, bu kayıt ilgili nesne ile ilişki
+        //kurmamıza yardımcı olacak
+
 }
 //StoreApp yazan yerin içinden Product dosyasını sildik. buraya yazdık.
 //bu iki projeyi birbirine bağlamamız lazım, onun için komut sisteminden yapacaz
