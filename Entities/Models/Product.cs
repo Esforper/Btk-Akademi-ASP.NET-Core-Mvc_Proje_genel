@@ -6,11 +6,12 @@ public class Product
 {
         public int ProductId { get; set; }
 
-        [Required(ErrorMessage = "ProductName is required")] //boş ürün tanımlamamak için
+     //   [Required(ErrorMessage = "ProductName is required")] //boş ürün tanımlamamak için
+     //bu kısımları ProductDto dosyasını oluşturduktan sonra kaldırıyoruz
         public String? ProductName { get; set; } = string.Empty;
 
 
-        [Required(ErrorMessage = "The Value is invalid")]  //ilgili nesnenin hemen üstüne yazılmalı
+       // [Required(ErrorMessage = "The Value is invalid")]  //ilgili nesnenin hemen üstüne yazılmalı
         public decimal Price { get; set; }
 
         public int CategoryId { get; set; }     //Foregin key
