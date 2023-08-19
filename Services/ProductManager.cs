@@ -1,3 +1,5 @@
+using AutoMapper;
+using Entities.Dtos;
 using Entities.Models;
 using Repositories.Contracts;
 using Services.Contracts;
@@ -8,14 +10,28 @@ namespace Services
     {   
         //ProductManager , repository managere bağımlı
         private readonly IRepositoryManager _manager;
+        private readonly IMapper _mapper;
+        //readonly bir ifadenin değeri yalnızca iki yerde verilebilir
+        //ya tanımlandığı yer ya da structor
 
-        public ProductManager(IRepositoryManager manager)   //DI çerçevesi
+        public ProductManager(IRepositoryManager manager, IMapper mapper)   //DI çerçevesi
         {
+           
             _manager = manager;
+            _mapper = mapper;
         }
 
-        public void CreateProduct(Product product)
+        public void CreateProduct(ProductDtoForInsertion productDto)
         {
+            // Product product = new Product() //ProductDto dan gelen özellikleri Product a aktaracaz (Maplemek gibi bir şey)
+            // //bu tür işlemlerin sayısı çok fazla artar diye AutoMapperlar kullanılıyor.
+            // {
+            //     ProductName = productDto.ProductName,
+            //     Price = productDto.Price,
+            //     CategoryId = productDto.CategoryId
+            // };
+
+            Product product = _mapper.Map<Product>(productDto);
            _manager.Product.Create(product);
            _manager.Save();
         }

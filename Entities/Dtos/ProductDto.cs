@@ -17,7 +17,7 @@ namespace Entities.Dtos
 
         public int CategoryId { get; init; } 
 
-       // public Category? Category { get; set; } bu alana ihtiyaç yok , kalan alanları Models klasörü altındaki
+       // public Category? Category { get; set; } //bu alana ihtiyaç yok , kalan alanları Models klasörü altındaki
        //Product.cs klasöründen aldık
 
     }
